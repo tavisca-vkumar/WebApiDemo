@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace WebApiDemo.Tests
@@ -42,6 +43,23 @@ namespace WebApiDemo.Tests
             var ValidManager = new Employee("Vikesh Singh", 7, 500000, 23, "manager");
             Assert.Equal(1 == 2, ManagerEmpController.IsValidManager(InvalidManager));
             Assert.Equal(1 == 1, ManagerEmpController.IsValidManager(ValidManager));
+        }
+        [Fact]
+        public void Test_SelectManager()
+        {
+            Employee emp = new Employee();
+            var empA = new Employee("empA", 8, 5000, 23, "employee");
+            var empB = new Employee("empB", 9, 5000, 23, "employee");
+            var empC = new Employee("empC", 10, 5000, 23, "employee");
+            var managerA = new Employee("managerA", 11, 60000, 23, "manager");
+            var empUnderAManagerList = new List<Employee>();
+            empUnderAManagerList.Add(empA);
+            empUnderAManagerList.Add(empB);
+            empUnderAManagerList.Add(empC);
+            ManagerEmpController.SelectManager(managerA, empA);
+            ManagerEmpController.SelectManager(managerA, empB);
+            ManagerEmpController.SelectManager(managerA, empC);
+            Assert.Equal(empUnderAManagerList, Manager.ManagerEmpList[managerA]);
         }
     }
 }
