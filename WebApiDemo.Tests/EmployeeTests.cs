@@ -34,5 +34,14 @@ namespace WebApiDemo.Tests
             Assert.Equal("this employee already exists", ex.Message);
             
         }
+        [Fact]
+        public void Test_IsValidManager()
+        {
+            Employee emp = new Employee();
+            var InvalidManager = new Employee("Aniket", 6, 5000, 23, "employee");
+            var ValidManager = new Employee("Vikesh Singh", 7, 500000, 23, "manager");
+            Assert.Equal(1 == 2, ManagerEmpController.IsValidManager(InvalidManager));
+            Assert.Equal(1 == 1, ManagerEmpController.IsValidManager(ValidManager));
+        }
     }
 }
