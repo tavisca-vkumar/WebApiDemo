@@ -15,7 +15,7 @@ namespace WebApiDemo.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Employee>> Get()
         {
-            return Employee.ManagerList;
+            return Employee.EmployeesList;
         }
 
         public List<Employee> EmployeesOfManager = new List<Employee>();
@@ -25,7 +25,7 @@ namespace WebApiDemo.Controllers
         public ActionResult<Employee> GetMangerByID(int id)
         {
             //return "aesrtyt";
-            foreach (Employee manager in Employee.ManagerList)
+            foreach (Employee manager in Employee.EmployeesList)
             {
                 if (manager.ID == id)
                     return manager;

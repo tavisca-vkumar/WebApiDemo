@@ -1,0 +1,17 @@
+C:\Users\vkumar\source\repos\WebApiDemo\WebApiDemo.Tests\obj\Debug\netcoreapp2.1\WebApiDemo.Tests.csprojAssemblyReference.cache
+C:\Users\vkumar\source\repos\WebApiDemo\WebApiDemo.Tests\obj\Debug\netcoreapp2.1\WebApiDemo.Tests.csproj.CoreCompileInputs.cache
+C:\Users\vkumar\source\repos\WebApiDemo\WebApiDemo.Tests\obj\Debug\netcoreapp2.1\WebApiDemo.Tests.AssemblyInfoInputs.cache
+C:\Users\vkumar\source\repos\WebApiDemo\WebApiDemo.Tests\obj\Debug\netcoreapp2.1\WebApiDemo.Tests.AssemblyInfo.cs
+C:\Users\vkumar\source\repos\WebApiDemo\WebApiDemo.Tests\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\vkumar\source\repos\WebApiDemo\WebApiDemo.Tests\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\vkumar\source\repos\WebApiDemo\WebApiDemo.Tests\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\Users\vkumar\source\repos\WebApiDemo\WebApiDemo.Tests\bin\Debug\netcoreapp2.1\WebApiDemo.Tests.deps.json
+C:\Users\vkumar\source\repos\WebApiDemo\WebApiDemo.Tests\bin\Debug\netcoreapp2.1\WebApiDemo.Tests.runtimeconfig.json
+C:\Users\vkumar\source\repos\WebApiDemo\WebApiDemo.Tests\bin\Debug\netcoreapp2.1\WebApiDemo.Tests.runtimeconfig.dev.json
+C:\Users\vkumar\source\repos\WebApiDemo\WebApiDemo.Tests\bin\Debug\netcoreapp2.1\WebApiDemo.Tests.dll
+C:\Users\vkumar\source\repos\WebApiDemo\WebApiDemo.Tests\bin\Debug\netcoreapp2.1\WebApiDemo.Tests.pdb
+C:\Users\vkumar\source\repos\WebApiDemo\WebApiDemo.Tests\bin\Debug\netcoreapp2.1\WebApiDemo.dll
+C:\Users\vkumar\source\repos\WebApiDemo\WebApiDemo.Tests\bin\Debug\netcoreapp2.1\WebApiDemo.pdb
+C:\Users\vkumar\source\repos\WebApiDemo\WebApiDemo.Tests\obj\Debug\netcoreapp2.1\WebApiDemo.Tests.csproj.CopyComplete
+C:\Users\vkumar\source\repos\WebApiDemo\WebApiDemo.Tests\obj\Debug\netcoreapp2.1\WebApiDemo.Tests.dll
+C:\Users\vkumar\source\repos\WebApiDemo\WebApiDemo.Tests\obj\Debug\netcoreapp2.1\WebApiDemo.Tests.pdb

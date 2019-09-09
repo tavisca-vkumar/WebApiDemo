@@ -12,19 +12,6 @@ namespace WebApiDemo
         public int ID;
         public int Salary;
         public int Age;
-        public static List<Employee> ManagerList = new List<Employee>()
-        {
-            new Employee("vikesh", 1, 5000, 23, "manager"),
-            new Employee("pandey", 2, 500, 23, "manager")
-        };
-        public static List<Employee> EmployeesList = new List<Employee>()
-        {
-            new Employee("vikesh", 1, 5000, 23, "manager"),
-            new Employee("pandey", 2, 500, 23, "manager"),
-            new Employee("ram", 3, 5000, 23, "employee"),
-            new Employee("shyam", 4, 500, 23, "employee")
-        };
-
         public Employee()
         {
 
@@ -37,6 +24,39 @@ namespace WebApiDemo
             Age = age;
             EmpPost = post;
         }
+        //public static List<Employee> ManagerList = new List<Employee>()
+        //{
+        //    new Employee("vikesh", 1, 5000, 23, "manager"),
+        //    new Employee("pandey", 2, 500, 23, "manager")
+        //};
+        public static List<Employee> EmployeesList = new List<Employee>()
+        //{
+        //    new Employee("vikesh", 1, 5000, 23, "manager"),
+        //    new Employee("pandey", 2, 500, 23, "manager"),
+        //    new Employee("ram", 3, 5000, 23, "employee"),
+        //    new Employee("shyam", 4, 500, 23, "employee")
+        //}
+        ;
+        public bool EmployeeAlreadyExist(Employee emp)
+        {
+            foreach(Employee empList in EmployeesList)
+            {
+                if (emp.ID == empList.ID)
+                    return true;
+            }
+            return false;
+        }
+        public void PutEmployee(Employee emp)
+        {
+            
+                if (!EmployeeAlreadyExist(emp))
+                    EmployeesList.Add(emp);
+                else
+                    throw new InvalidOperationException("this employee already exists");
+
+        }
+
+        
         //public void PutManagar()
         //{
         //    ManagerList.Add(this);
