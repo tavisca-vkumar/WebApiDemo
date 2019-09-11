@@ -11,37 +11,47 @@ namespace WebApiDemo
         int ID;
         int Salary;
         int Age;
-        //public Manager(Employee emp)
-        //{
-        //    Name = emp.Name;
-        //}
-        //List<KeyValuePair<int, string>> EmployeesUnderManager = new List<KeyValuePair<int, string>>() ;
-
         
         public static Dictionary<Employee, List<Employee>> ManagerEmpList = new Dictionary<Employee, List<Employee>>();
 
-        //List<Employee> EmployeesUnderManager = new List<Employee>()
-        //{
-        //    new Employee("ram", 3, 5000, 23, "employee"),
-        //    new Employee("shyam", 4, 500, 23, "employee")
-        //};
+        public static List<Employee> GetManagerList()
+        {
+            var managers = new List<Employee>();
+            foreach(var itr in ManagerEmpList)
+            {
+                managers.Add(itr.Key);
+            }
+            return managers;
+        }
 
-        //bool CheckEmpPresent(Employee employee)
-        //{
-        //    foreach(Employee emp in EmployeesUnderManager)
-        //    {
-        //        if (employee.ID == emp.ID)
-        //            return true;
-        //    }
-        //    return false;
-        //}
-        //public void SelectEmployee(Employee emp)
-        //{
-        //    if(!CheckEmpPresent(emp))
-        //    {
-        //        EmployeesUnderManager.Add((emp));
-        //    }
-        //}
+
+        public static bool IsValidManager(int id)
+        {
+            foreach (var emp in Employee.EmployeesList)
+            {
+                if (emp.ID == id && emp.EmpPost == "manager")
+                    return true;
+            }
+            return false;
+        }
+
+
+        public static Employee GetManagerById(int id)
+        {
+
+            //foreach(var manager in Manager.ManagerEmpList)
+            //{
+            //    if (manager.Key.ID == id)
+            //        return manager.Key;
+            //}
+            foreach(var manager in Employee.EmployeesList)
+            {
+                if (manager.ID == id)
+                    return manager;
+            }
+            throw new Exception("no Manager Found");
+        }
         
+
     }
 }

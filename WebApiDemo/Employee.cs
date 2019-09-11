@@ -23,21 +23,23 @@ namespace WebApiDemo
             Salary = salary;
             Age = age;
             EmpPost = post;
+
         }
-        //public static List<Employee> ManagerList = new List<Employee>()
-        //{
-        //    new Employee("vikesh", 1, 5000, 23, "manager"),
-        //    new Employee("pandey", 2, 500, 23, "manager")
-        //};
-        public static List<Employee> EmployeesList = new List<Employee>()
-        //{
-        //    new Employee("vikesh", 1, 5000, 23, "manager"),
-        //    new Employee("pandey", 2, 500, 23, "manager"),
-        //    new Employee("ram", 3, 5000, 23, "employee"),
-        //    new Employee("shyam", 4, 500, 23, "employee")
-        //}
-        ;
-        public bool EmployeeAlreadyExist(Employee emp)
+
+        public static List<Employee> EmployeesList = new List<Employee>();
+
+
+        public static void PutEmployee(Employee emp)
+        {
+
+            if (!Employee.EmployeeAlreadyExist(emp))
+                 EmployeesList.Add(emp);
+            else
+                throw new InvalidOperationException("this employee already exists");
+
+        }
+
+        public static bool EmployeeAlreadyExist(Employee emp)
         {
             foreach(Employee empList in EmployeesList)
             {
@@ -46,29 +48,6 @@ namespace WebApiDemo
             }
             return false;
         }
-        public void PutEmployee(Employee emp)
-        {
-            
-                if (!EmployeeAlreadyExist(emp))
-                    EmployeesList.Add(emp);
-                else
-                    throw new InvalidOperationException("this employee already exists");
-
-        }
-
         
-        //public void PutManagar()
-        //{
-        //    ManagerList.Add(this);
-        //}
-        //public void Post(string post)
-        //{
-        //    EmpPost = post;
-        //    if(EmpPost == "Manager")
-        //    {
-        //        ManagerList.Add()
-        //    }
-        //}
-
     }
 }

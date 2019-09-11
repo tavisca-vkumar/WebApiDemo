@@ -7,28 +7,41 @@ namespace WebApiDemo
 {
     public class ManagerEmpController
     {
-        public static void SelectManager(Employee manager, Employee emp)
+        public static void SelectManager(int id, Employee emp)
         {
-            if (ManagerEmpController.IsValidManager(manager))
+            if (Manager.IsValidManager(id))
             {
                 try
                 {
-                    Manager.ManagerEmpList[manager].Add(emp);
+                    Manager.ManagerEmpList[Manager.GetManagerById(id)].Add(emp);
                 }
                 catch (KeyNotFoundException)
                 {
-                    Manager.ManagerEmpList.Add(manager, new List<Employee>() { emp });
+                    Manager.ManagerEmpList.Add(Manager.GetManagerById(id), new List<Employee>() { emp });
                 }
             }
             else
                 throw new Exception("selelcted employee is not a valid manager");
         }
-        public static bool IsValidManager(Employee manager)
+
+
+        //public static void SelectManager(int id, Employee emp)
+        //{
+        //    Manager.ManagerEmpList.Add(Manager.GetManagerById(id), new List<Employee>() { emp });   
+        //}
+
+        Employee emp = new Employee();
+
+        
+
+        public static List<Employee> GetEmployeeOfManager(int id)
         {
-            if (manager.EmpPost == "manager")
-                return true;
-            else
-                return false;
+            foreach(var manager in Manager.ManagerEmpList)
+            {
+                if (manager.Key.ID == id)
+                    return manager.Value;
+            }
+            return null ;
         }
     }
 }
